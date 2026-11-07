@@ -37,7 +37,7 @@
   "email": "jorondrazadominique@gmail.com",
   "telephone": "+261329074924",
   "areaServed": { "@type": "Country", "name": "Madagascar" },
-  "address": { "@type": "PostalAddress", "addressCountry": "MG" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Antananarivo", "addressCountry": "MG" },
   "founder": {
     "@type": "Person",
     "name": "Tsontsozara Dominique Jorondraza",
@@ -60,6 +60,17 @@
   }
 }
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Comment obtenir un devis ?","acceptedAnswer":{"@type":"Answer","text":"Envoyez votre demande par le formulaire ou sur WhatsApp. Le devis est établi après échange sur le périmètre de la mission, puis transmis par e-mail."}},
+    {"@type":"Question","name":"Quels livrables recevrai-je ?","acceptedAnswer":{"@type":"Answer","text":"Notes de calcul justificatives, schémas unifilaires et multifilaires, plans d'aménagement de tableaux, nomenclatures et rapport de synthèse, en PDF et DXF."}},
+    {"@type":"Question","name":"Intervenez-vous partout à Madagascar ?","acceptedAnswer":{"@type":"Answer","text":"Les études se mènent à distance depuis Antananarivo ; les déplacements sur site sont prévus au cas par cas."}}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -76,6 +87,7 @@
   </a>
   <nav class="main-nav" aria-label="Navigation principale">
     <a href="#services">Services</a>
+    <a href="#methode">Méthode</a>
     <a href="#apropos">À propos</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -130,6 +142,15 @@
         </g>
       </svg>
     </div>
+  </section>
+
+  <section class="trust" aria-label="Repères">
+    <ul class="trust-list">
+      <li><span class="trust-k">8+ ans</span><span class="trust-v">d'étude, de conception et de réalisation technique de projets</span></li>
+      <li><span class="trust-k">Normes</span><span class="trust-v">NF C 15-100, CEI 60364, UTE C 15-105, CEI 60909</span></li>
+      <li><span class="trust-k">Livrables</span><span class="trust-v">Notes de calcul, schémas et plans en PDF et DXF</span></li>
+      <li><span class="trust-k">Contrôle</span><span class="trust-v">Chaque calcul vérifié avant remise au client</span></li>
+    </ul>
   </section>
 
   <section id="services" class="services">
@@ -194,6 +215,44 @@
     </div>
   </section>
 
+  <section id="methode" class="methode">
+    <p class="section-eyebrow">Méthode</p>
+    <h2>Un cadre clair, de la demande à la remise</h2>
+    <ol class="steps">
+      <li><span class="step-n">01</span><h3>Votre demande</h3><p>Vous décrivez le projet par le formulaire ou sur WhatsApp : nature de l'installation, site, échéance.</p></li>
+      <li><span class="step-n">02</span><h3>Cadrage et devis</h3><p>Après échange sur le périmètre, un devis détaillé vous est adressé. Il est établi sur demande, sans engagement.</p></li>
+      <li><span class="step-n">03</span><h3>Étude</h3><p>Calculs, schémas et plans selon les normes applicables, avec hypothèses écrites et vérifications chiffrées.</p></li>
+      <li><span class="step-n">04</span><h3>Remise et suivi</h3><p>Livrables vérifiés, présentés au client, puis suivi technique si la mission l'inclut (AMO, réception).</p></li>
+    </ol>
+  </section>
+
+  <section id="faq" class="faq">
+    <p class="section-eyebrow">Questions fréquentes</p>
+    <h2>Avant de nous contacter</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Comment obtenir un devis ?</summary>
+        <p>Envoyez votre demande par le formulaire ou sur WhatsApp. Le devis est établi après échange sur le périmètre de la mission, puis vous est transmis par e-mail.</p>
+      </details>
+      <details>
+        <summary>Quels documents dois-je fournir pour démarrer ?</summary>
+        <p>Selon la mission : plans existants, schéma actuel, puissances installées ou prévues, factures d'électricité, devis à analyser. Un premier échange permet de lister l'essentiel.</p>
+      </details>
+      <details>
+        <summary>Quels livrables recevrai-je ?</summary>
+        <p>Notes de calcul justificatives, schémas unifilaires et multifilaires, plans d'aménagement de tableaux, nomenclatures et rapport de synthèse. Les plans sont remis en PDF et en DXF.</p>
+      </details>
+      <details>
+        <summary>Intervenez-vous partout à Madagascar ?</summary>
+        <p>Les études se mènent à distance depuis Antananarivo. Les déplacements sur site sont prévus au cas par cas, selon la mission.</p>
+      </details>
+      <details>
+        <summary>Mes informations restent-elles confidentielles ?</summary>
+        <p>Oui. Les documents et données transmis ne servent qu'à la mission et ne sont communiqués à aucun tiers sans votre accord.</p>
+      </details>
+    </div>
+  </section>
+
   <section id="apropos" class="apropos">
     <div class="apropos-inner">
       <p class="section-eyebrow">À propos</p>
@@ -244,11 +303,19 @@
           </select>
         </div>
         <div class="form-row">
+          <label for="f-lieu">Lieu du projet <span class="opt">(optionnel)</span></label>
+          <input type="text" id="f-lieu" name="lieu">
+        </div>
+        <div class="form-row">
+          <label for="f-delai">Échéance souhaitée <span class="opt">(optionnel)</span></label>
+          <input type="text" id="f-delai" name="delai" placeholder="Ex. : fin novembre">
+        </div>
+        <div class="form-row">
           <label for="f-message">Message</label>
           <textarea id="f-message" name="message" rows="4" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Envoyer la demande</button>
-        <p class="form-note" id="form-note">Ouvre votre application mail avec le message pré-rempli, prêt à envoyer.</p>
+        <p class="form-note" id="form-note">Ouvre votre application mail avec le message pré-rempli. Un devis vous est adressé après étude de votre demande.</p>
       </form>
 
       <div class="contact-side">
@@ -268,10 +335,15 @@
 
 </main>
 
+<section id="mentions" class="mentions">
+  <p class="section-eyebrow">Mentions</p>
+  <p>Éditeur du site : TDJ Consulting, Tsontsozara Dominique Jorondraza, Antananarivo, Madagascar. Contact : jorondrazadominique@gmail.com, +261 32 90 749 24. Hébergement : Vercel Inc., 340 S Lemon Ave, Walnut, CA 91789, États-Unis. Les informations transmises par le formulaire ne sont utilisées que pour répondre à votre demande.</p>
+</section>
+
 <footer class="site-footer">
   <img src="assets/logo.png" alt="TDJ Consulting" class="footer-logo">
   <span class="footer-tagline">Ingénierie électrique et conseil énergie</span>
-  <span class="footer-year">© <span id="year"></span></span>
+  <span class="footer-year">© <span id="year"></span> TDJ Consulting</span>
 </footer>
 
 <script src="script.js"></script>

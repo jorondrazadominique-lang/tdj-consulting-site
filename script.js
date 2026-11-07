@@ -8,6 +8,8 @@ if (form) {
     const email = form.email.value.trim();
     const phone = form.phone.value.trim();
     const subject = form.subject.value;
+    const lieu = form.lieu.value.trim();
+    const delai = form.delai.value.trim();
     const message = form.message.value.trim();
 
     const mailSubject = `TDJ Consulting — ${subject} — ${name}`;
@@ -16,6 +18,8 @@ if (form) {
       `Email : ${email}`,
       phone ? `Téléphone : ${phone}` : null,
       `Type de demande : ${subject}`,
+      lieu ? `Lieu du projet : ${lieu}` : null,
+      delai ? `Échéance souhaitée : ${delai}` : null,
       '',
       message
     ].filter(Boolean);
