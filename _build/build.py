@@ -306,6 +306,7 @@ def build_activity(i, a):
     mission = "\n".join(f"        <li>{e(x)}</li>" for x in a["mission"])
     deliv = "\n".join(f"        <li>{e(x)}</li>" for x in a["deliverables"])
     cases = "\n".join(f'      <li><h3>{e(t)}</h3><p>{e(d)}</p></li>' for t, d in a["cases"])
+    note = ("Plans et schémas remis en PDF et DXF. " if "PLN" in a["deliv_codes"] else "") + "Chaque document porte une référence, un indice de révision et une date."
     img2 = ""
     if a.get("image2"):
         img2 = f'''
@@ -363,7 +364,7 @@ def build_activity(i, a):
       <ul class="sq-list">
 {deliv}
       </ul>
-      <p class="note">Plans et schémas remis en PDF et DXF. Chaque document porte une référence, un indice de révision et une date.</p>
+      <p class="note">{note}</p>
     </div>
   </section>
 {img2}
